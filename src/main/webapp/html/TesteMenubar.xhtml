@@ -1,0 +1,59 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui" >
+	  
+	  <ui:define name="titulo">Padrao deu certo</ui:define>
+	  
+	  <ui:define name="corpo">
+	  	<br/>
+	  	
+	  	<h:form id="frm">
+	  		<p:menubar autoDisplay="false">
+	  			<p:submenu label="Cadastros">
+	  				<p:submenu label="Funcionarios">
+	  					<p:menuitem value="Novo" outcome="perfilUsuario"/>
+	  					<p:menuitem value="Pesquisa" icon="ui-icon-search" url="http://www.google.com.br"/>	
+	  				</p:submenu>
+	  				
+	  			</p:submenu>
+	  		
+	  		
+	  			<p:submenu label="Perfil">
+	  				<p:menuitem value="Dados Pessoais"/>
+	  				<p:separator />
+	  				<p:menuitem value="Endereços"/>
+	  				<p:menuitem value="Contatos"/>
+	  			</p:submenu>
+	  		</p:menubar>
+	  	
+	  	</h:form>
+	  	
+	  <br/>
+	   <br/> 	
+	  	
+	  	<h:form>
+	  	
+	  		<p:messages id="msg" />
+	  		<p:growl autoUpdate="true" />
+	  		
+			<h:outputLabel value="Nome" for="nome" />			
+			<p:inputText id="nome" required="true" />
+			
+			<p:commandButton value="Enviar"  update="msg"/>
+			
+			
+			<p:commandButton value="Adicionar mensagem de erro" action="#{messagesBean.adicionarMensagemErro}"/>
+			<p:commandButton value="Adicionar Aviso Flutuante" action="#{messagesBean.adicionarAvisoFlutuante}"/>
+			
+		</h:form>
+		
+		
+		
+		
+	  </ui:define>
+	  
+	  <br/>
+</ui:composition>

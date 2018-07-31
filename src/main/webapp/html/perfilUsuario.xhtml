@@ -1,0 +1,54 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui" >
+	  
+	  <ui:define name="titulo">Perfil Usuário</ui:define>
+	  
+	  <ui:define name="corpo">
+	  	<br/><br/><br/>
+	  	<h:form id="frm">
+	  		<p:tabView orientation="top" effect="fade" effectDuration="fast">
+	  			<p:tab title="Dados Pessoais">
+	  				<h:panelGrid columns="2" cellpadding="4">
+	  				<p:outputLabel value="email"/>
+	  				<p:inputText size="30"/>
+	  				
+	  				<p:outputLabel value="nome"/>
+	  				<p:inputText size="30" />
+	  				
+	  				<p:outputLabel value="telefone"/>
+	  				<p:inputText size="30" />
+	  				
+	  				
+	  			</h:panelGrid>
+	  			</p:tab>
+	  			<p:tab title="Endereço" disabled="true">
+	  				<h:panelGrid columns="2" cellpadding="4">
+	  				<p:outputLabel value="cidade"/>
+	  				<p:inputText size="30"/>
+	  				
+	  				<p:outputLabel value="bairro"/>
+	  				<p:inputText size="30" />
+	  				
+	  				<p:outputLabel value="numero"/>
+	  				<p:inputText size="30" />
+	  				
+	  			</h:panelGrid>
+	  			</p:tab>
+	  		</p:tabView>
+			
+			
+		</h:form>
+		
+	  	<h:form>
+			<h:commandLink  value="Tela Login" action="login?faces-redirect=true"/>
+			<h:commandLink  value="Tela Cadastro Produto" action="cadastroProduto?faces-redirect=true"/>
+			<h:commandLink  value="Tela Perfil Usuário" action="perfilUsuario?faces-redirect=true"/>
+		</h:form>
+	  </ui:define>
+	  
+	  
+</ui:composition>

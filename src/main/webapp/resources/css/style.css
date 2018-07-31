@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	font-weight: normal;
+}
+
+header{
+	padding: 5px 0px;
+	margin-bottom: 20px;
+	height: 100px;
+	max-width:1280px;
+	width: 80%;
+	
+	
+	
+	
+	
+	margin: 0 auto;
+	padding: 5px;
+		
+}
+
+header > div{
+	margin-left: 8px
+}
+
+footer{
+	padding: 0px 8px;
+	margin-bottom: 10px;	
+}
+
+/*corpo */
+.corpo{
+	width: 100%;
+	
+}
+/*conteudo*/
+.conteudo{
+	max-width:1280px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 5px;
+	height:100px	
+}
+
+
+
+.logo{
+	float: left;
+	width:150px;
+	height:100px
+}
+
+/* clearfix */
+.limpa{
+	clear: both;
+	overflow: hidden;
+	display:block
+}
+
+.cinza{
+	background-color: #545454;
+	color:#fff;
+}
+
+
+/*login*/
+#login-dialog{
+	width: 290px;
+	margin: auto;
+	margin-top: 150px;
+}
+.grid-login{
+	background-color: f2f2f2;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	margin-top: 8px;
+}
+
+/*cadastro*/
+
+.rotulo{
+	width: 150px;
+}
+
+.ui-panelgrid td{
+	height: 34px
+}
+
+
+/*ajax*/
+.ajax-status{
+	position: fixed;
+	top:55px;
+	right:10px;
+	width:35px;
+	height:35px;
+}

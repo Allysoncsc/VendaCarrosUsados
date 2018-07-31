@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:composite="http://java.sun.com/jsf/composite"
+	  xmlns:p="http://primefaces.org/ui" >
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><ui:insert name="titulo">Sistema de venda</ui:insert></title>
+<h:outputStylesheet  library="css" name="style.css"/>
+<h:outputScript library="js" name="jquerymaskMoney.js"/>
+</h:head>
+<h:body>
+
+	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
+		<f:facet name="start">
+			<h:graphicImage library="imagens" name="giphy.gif"/>
+		</f:facet>
+		<f:facet name="complete">
+			<h:outputText value=""/>
+		</f:facet>
+	</p:ajaxStatus>
+
+	<div class="corpo cinza">
+		<header >
+			<div>
+				<h:link>
+					<h:graphicImage library="imagens" name="walle.png" alt="Logo" class="logo"/>
+				</h:link>
+			</div>
+		</header>
+	</div>
+
+	<div id="conteudo">
+		<ui:insert name="corpo" />
+	</div>
+	
+	<p:separator style="margin-top: 20px"/>
+	<footer>
+		Aqui vai ficar o endereço para contato
+	</footer>
+	
+	<script>
+		function configurarMoeda(){
+			$(".demo3").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
+		}
+		
+		$(document).ready(function(){
+			configurarMoeda();
+		});
+		
+	</script>
+	
+</h:body>
+</html>
+
+
+
